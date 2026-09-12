@@ -1,1 +1,0 @@
-# Jadwak-Kuu
