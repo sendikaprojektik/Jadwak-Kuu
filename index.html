@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jadwal Ku - Pengingat Kegiatan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN ================= -->
+    <div id="loginPage" class="login-page">
+
+        <div class="login-box">
+
+            <div class="logo">
+                ⏰
+            </div>
+
+            <h1>Jadwal Ku</h1>
+
+            <p class="subtitle">
+                Pengingat kegiatan sehari-hari
+            </p>
+
+            <form id="loginForm">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Masukkan email kamu"
+                    required
+                >
+
+                <button type="submit" class="btn-primary">
+                    Masuk
+                </button>
+
+            </form>
+
+            <p class="login-info">
+                Masukkan email untuk menggunakan Jadwal Ku.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= APLIKASI ================= -->
+
+    <div id="appPage" class="app hidden">
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div class="header-left">
+
+                <div class="small-logo">
+                    ⏰
+                </div>
+
+                <div>
+                    <h1>Jadwal Ku</h1>
+                    <p>Pengingat kegiatan sehari-hari</p>
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div id="clock">
+                    00:00:00
+                </div>
+
+                <button id="logoutBtn" class="logout">
+                    Keluar
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <main>
+
+            <!-- SAPAAN -->
+
+            <section class="welcome">
+
+                <div>
+
+                    <h2 id="welcomeText">
+                        Selamat datang 👋
+                    </h2>
+
+                    <p id="todayDate">
+                        Hari ini
+                    </p>
+
+                </div>
+
+                <button id="notificationBtn" class="notification-btn">
+                    🔔 Aktifkan Notifikasi
+                </button>
+
+            </section>
+
+
+            <!-- FORM KEGIATAN -->
+
+            <section class="card">
+
+                <h2>➕ Tambah Kegiatan</h2>
+
+                <form id="activityForm">
+
+                    <div class="form-group">
+
+                        <label>
+                            Nama Kegiatan
+                        </label>
+
+                        <input
+                            type="text"
+                            id="activityName"
+                            placeholder="Contoh: Olahraga"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Tanggal
+                        </label>
+
+                        <input
+                            type="date"
+                            id="activityDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Waktu
+                        </label>
+
+                        <input
+                            type="time"
+                            id="activityTime"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Ulangi
+                        </label>
+
+                        <select id="repeatType">
+
+                            <option value="once">
+                                Sesekali
+                            </option>
+
+                            <option value="daily">
+                                Harian
+                            </option>
+
+                            <option value="weekly">
+                                Mingguan
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-primary add-btn"
+                    >
+                        + Tambahkan Kegiatan
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- KEGIATAN HARI INI -->
+
+            <section class="card">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2>📋 Kegiatan Hari Ini</h2>
+
+                        <p>
+                            Daftar kegiatan yang harus dilakukan hari ini
+                        </p>
+
+                    </div>
+
+                    <span id="activityCount" class="count">
+                        0 kegiatan
+                    </span>
+
+                </div>
+
+
+                <div id="activityList">
+
+                    <!-- kegiatan akan dibuat JavaScript -->
+
+                </div>
+
+            </section>
+
+
+            <!-- SEMUA KEGIATAN -->
+
+            <section class="card">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2>📅 Semua Kegiatan</h2>
+
+                        <p>
+                            Daftar semua jadwal yang tersimpan
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div id="allActivityList">
+
+                    <!-- semua kegiatan -->
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                © 2026 Jadwal Ku — Pengingat Kegiatan Sehari-hari
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- AUDIO ALARM -->
+
+    <audio id="alarmSound">
+
+        <source
+            src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
